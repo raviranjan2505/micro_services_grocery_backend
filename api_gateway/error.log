@@ -1,0 +1,7 @@
+{"level":"error","message":"Proxy error: ","service":"identity-service","timestamp":"2025-09-26T11:22:49.434Z"}
+{"level":"error","message":"Proxy error: ","service":"identity-service","timestamp":"2025-09-26T11:23:01.870Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"identity-service","timestamp":"2025-09-26T11:37:21.906Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"identity-service","timestamp":"2025-09-26T11:37:24.183Z"}
+{"level":"error","message":"Proxy error: res.status is not a function","service":"identity-service","timestamp":"2025-09-26T11:43:04.172Z"}
+{"level":"error","message":"Proxy error: res.status is not a function","service":"identity-service","timestamp":"2025-09-26T11:45:03.642Z"}
+{"level":"error","message":"Proxy error: res.status is not a function","service":"identity-service","timestamp":"2025-09-26T11:46:00.601Z"}

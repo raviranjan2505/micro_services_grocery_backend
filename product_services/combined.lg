@@ -1,0 +1,33 @@
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:17:53.908Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:18:01.654Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:18:48.365Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:18:50.790Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:21:54.757Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:21:56.155Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:55:36.278Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:56:04.534Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:56:07.467Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:56:28.104Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:56:48.671Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:57:22.872Z"}
+{"level":"warn","message":"Access attempted without user ID","service":"identity-service","timestamp":"2025-09-26T12:57:45.673Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:14:31.604Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:14:48.862Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:10.806Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:12.555Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:13.515Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:38.319Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:39.929Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:42.933Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:16:46.591Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:18:30.663Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:18:32.620Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:18:33.802Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:18:38.952Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:18:41.257Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:18:43.370Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:32:08.285Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:32:10.650Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:32:11.658Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:32:12.842Z"}
+{"level":"warn","message":"User 2 with role USER attempted unauthorized access","service":"identity-service","timestamp":"2025-09-26T13:32:13.730Z"}

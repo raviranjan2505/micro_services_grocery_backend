@@ -1,0 +1,215 @@
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-09-26T10:34:42.129Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T10:34:42.134Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T10:39:09.016Z"}
+{"level":"info","message":"Received GET request to /","service":"identity-service","timestamp":"2025-09-26T10:39:57.451Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T10:39:57.452Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T10:41:21.902Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T10:41:21.903Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T10:41:22.067Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T10:42:20.441Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T10:42:20.441Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T10:42:20.442Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T10:43:26.889Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T10:43:26.890Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-09-26T10:43:27.114Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:22:49.122Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:22:49.148Z"}
+{"level":"error","message":"Proxy error: ","service":"identity-service","timestamp":"2025-09-26T11:22:49.434Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:23:01.857Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:23:01.857Z"}
+{"level":"error","message":"Proxy error: ","service":"identity-service","timestamp":"2025-09-26T11:23:01.870Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:24:14.438Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:24:14.439Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-09-26T11:24:14.805Z"}
+{"level":"info","message":"Received GET request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T11:24:48.025Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:24:48.025Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T11:24:48.028Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:31:39.660Z"}
+{"level":"info","message":"Received GET request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T11:31:44.028Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:31:44.028Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T11:31:44.029Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:37:14.574Z"}
+{"level":"info","message":"Received GET request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T11:37:21.903Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:37:21.904Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"identity-service","timestamp":"2025-09-26T11:37:21.906Z"}
+{"level":"info","message":"Received GET request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T11:37:24.182Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:37:24.182Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"identity-service","timestamp":"2025-09-26T11:37:24.183Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:37:51.550Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:42:07.794Z"}
+{"level":"info","message":"Received GET request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T11:42:33.628Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:42:33.629Z"}
+{"level":"info","message":"Received PUT request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T11:43:04.171Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T11:43:04.171Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T11:43:04.172Z"}
+{"level":"error","message":"Proxy error: res.status is not a function","service":"identity-service","timestamp":"2025-09-26T11:43:04.172Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:45:03.630Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:45:03.631Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T11:45:03.641Z"}
+{"level":"error","message":"Proxy error: res.status is not a function","service":"identity-service","timestamp":"2025-09-26T11:45:03.642Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:46:00.599Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:46:00.599Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T11:46:00.600Z"}
+{"level":"error","message":"Proxy error: res.status is not a function","service":"identity-service","timestamp":"2025-09-26T11:46:00.601Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:47:21.127Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:47:27.685Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:47:29.227Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T11:47:33.575Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:47:35.780Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:47:35.781Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T11:47:35.782Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T11:58:34.089Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T11:58:34.093Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T11:58:36.705Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:59:11.721Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:59:11.721Z"}
+{"level":"info","message":"Response received from Post service: 413","service":"identity-service","timestamp":"2025-09-26T11:59:11.795Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T11:59:30.737Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T11:59:30.738Z"}
+{"level":"info","message":"Response received from Post service: 413","service":"identity-service","timestamp":"2025-09-26T11:59:30.744Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:16:28.829Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:16:28.831Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-09-26T12:16:28.837Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T12:17:01.918Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:17:01.918Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T12:17:02.149Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:17:28.234Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:17:28.234Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-09-26T12:17:28.631Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T12:18:36.928Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:18:36.928Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T12:18:37.044Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:19:01.981Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:19:01.982Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-09-26T12:19:02.016Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T12:22:11.314Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:22:11.314Z"}
+{"level":"info","message":"Response received from Post service: 400","service":"identity-service","timestamp":"2025-09-26T12:22:11.349Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:26:50.746Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:26:50.747Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-09-26T12:26:50.930Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:27:04.873Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:27:04.879Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T12:27:04.880Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T12:31:50.169Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T12:31:51.630Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:32:42.124Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:32:42.125Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T12:32:55.283Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:32:55.284Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T12:33:00.410Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:33:00.411Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T12:33:00.412Z"}
+{"level":"info","message":"Received PUT request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T12:33:07.259Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:33:07.260Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T12:33:07.260Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T12:33:22.101Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:33:22.101Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T12:33:22.288Z"}
+{"level":"info","message":"Received PUT request to /v1/categories/1","service":"identity-service","timestamp":"2025-09-26T12:33:51.670Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:33:51.670Z"}
+{"level":"info","message":"Received PUT request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T12:34:03.078Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:34:03.078Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T12:34:51.232Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:34:51.232Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:35:11.196Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:35:11.196Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T12:35:11.196Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:35:21.200Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:35:21.200Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:55:36.213Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:55:36.231Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:56:04.530Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:56:04.530Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:56:07.460Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:56:07.461Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T12:56:11.707Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:56:11.707Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T12:56:11.946Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:56:28.101Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:56:28.101Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T12:56:35.639Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T12:56:35.639Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T12:56:35.726Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:56:48.666Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:56:48.667Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:57:22.868Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:57:22.868Z"}
+{"level":"info","message":"Received GET request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T12:57:45.670Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T12:57:45.670Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:07:40.794Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:07:50.658Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:07:52.460Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:08:18.461Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:08:25.885Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:08:29.625Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:08:52.945Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-09-26T13:08:59.684Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:13:42.268Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:13:42.269Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:13:44.395Z"}
+{"level":"info","message":"Received POST request to /v1/categories","service":"identity-service","timestamp":"2025-09-26T13:14:12.109Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:14:12.110Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:14:31.582Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:14:31.583Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:14:41.195Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:14:41.195Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-09-26T13:14:41.196Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:14:48.858Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:14:48.858Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:10.802Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:10.802Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:12.552Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:12.552Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:13.512Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:13.512Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:16:17.728Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:16:17.728Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:16:17.819Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:38.315Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:38.315Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:39.924Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:39.925Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:42.927Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:42.928Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:16:46.588Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:16:46.588Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:18:30.632Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:18:30.633Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:18:32.615Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:18:32.615Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:18:33.798Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:18:33.798Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:18:38.949Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:18:38.949Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:18:41.252Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:18:41.252Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:18:43.367Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:18:43.367Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:18:52.084Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:18:52.084Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:18:52.279Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:22:05.215Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:22:05.222Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:22:05.453Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:22:10.493Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:22:10.494Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:22:10.578Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:31:30.607Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:31:30.607Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:31:30.833Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:32:08.280Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:32:08.280Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:32:10.645Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:32:10.646Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:32:11.639Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:32:11.648Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:32:12.839Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:32:12.839Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:32:13.726Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:32:13.727Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-09-26T13:32:18.530Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-09-26T13:32:18.531Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-09-26T13:32:18.648Z"}
+{"level":"info","message":"Received DELETE request to /v1/categories/4","service":"identity-service","timestamp":"2025-09-26T13:32:32.556Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-09-26T13:32:32.557Z"}

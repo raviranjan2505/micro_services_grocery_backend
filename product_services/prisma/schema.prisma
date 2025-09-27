@@ -1,0 +1,105 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Category {
+  id            Int        @id @default(autoincrement())
+  name          String
+  slug          String     @unique
+  image         String?    // Cloudinary secure_url
+  imagePublicId String?    // Cloudinary public_id (for delete/replace)
+  active        Boolean    @default(true)
+  imageHash     String?  
+  parentId      Int?
+  parent        Category?  @relation("SubCategories", fields: [parentId], references: [id])
+  subcategories Category[] @relation("SubCategories")
+  products      Product[]
+  @@unique([slug, parentId]) // slug unique only within same parent
+}
+
+model Brand {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  logo     String?
+  products Product[]
+}
+
+model Product {
+  id               Int               @id @default(autoincrement())
+  productCode      String            @unique
+  productName      String
+  shortDescription String?
+  fullDescription  String?
+  gstPercentage    Float             @default(0)
+  categoryId       Int
+  subCategoryId    Int?
+  subCategoryId2   Int?
+  brandId          Int?
+  mrp              Float
+  dp               Float
+  stockQuantity    Int
+  productSlug      String            @unique
+  defaultImage     String?
+  category         Category          @relation(fields: [categoryId], references: [id])
+  brand            Brand?            @relation(fields: [brandId], references: [id])
+  variants         ProductVariant[]
+  images           ProductImage[]
+  attributes       ProductAttribute[]
+  discounts        Discount[]
+}
+
+model ProductVariant {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  sku       String  @unique
+  price     Float
+  stock     Int
+  attributes Json?
+
+  product   Product @relation(fields: [productId], references: [id])
+}
+
+model ProductImage {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  url       String
+  isDefault Boolean @default(false)
+  hash      String?   // MD5/SHA1 hash of file
+  publicId  String?   // Cloudinary public_id
+  product   Product @relation(fields: [productId], references: [id])
+  @@unique([productId, hash]) // ✅ no duplicate images per product
+}
+
+model Attribute {
+  id       Int                 @id @default(autoincrement())
+  name     String              @unique
+  products ProductAttribute[]
+}
+
+model ProductAttribute {
+  id          Int       @id @default(autoincrement())
+  productId   Int
+  attributeId Int
+  value       String
+  product     Product   @relation(fields: [productId], references: [id])
+  attribute   Attribute @relation(fields: [attributeId], references: [id])
+}
+
+
+model Discount {
+  id           Int      @id @default(autoincrement())
+  productId    Int
+  discountType String   // "PERCENTAGE" | "FLAT"
+  value        Float
+  startDate    DateTime?
+  endDate      DateTime?
+  product      Product  @relation(fields: [productId], references: [id])
+}
