@@ -535,3 +535,10 @@ export async function searchProducts(query, page = 1, pageSize = 10) {
 
   return data;
 }
+
+export async function getProductById(id) {
+  return await prisma.product.findUnique({
+    where: { id: Number(id) },
+    include: { images: true },
+  });
+}

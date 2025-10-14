@@ -124,3 +124,11 @@ export async function searchProducts(req, res) {
   }
 }
 
+export async function getProductByProductId(req, res) {
+  try{
+    const productById = await productService.getProductById(req.params.productId);
+    res.status(200).json({success: true, data: productById})
+  }catch(err){
+    res.status(404).json({success: false, error: err.message})
+  }
+}

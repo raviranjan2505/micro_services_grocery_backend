@@ -25,7 +25,7 @@ const ratelimitOptions = rateLimit({
     legacyHeaders: false,
     handler:(req, res) => {
         logger.warn(`Sensitive endpoint rate limit exceeded for IP: ${req.ip}`);
-        res.status(429).json({success:false, message:"Too many requests"})
+        res.status(429).json({success:false, message:"Too many requests"});
     },
     store: new RedisStore({
         sendCommand: (...args) => redisClient.call(...args),
@@ -65,7 +65,6 @@ app.use(
       logger.info(
         `Response received from Identity service: ${proxyRes.statusCode}`
       );
-
       return proxyResData;
     },
   })
@@ -75,9 +74,9 @@ app.use(
   "/v1/categories",
   (req, res, next) => {
     if (req.method !== "GET") {
-      return validateToken(req, res, next); // auth for non-GET
+      return validateToken(req, res, next); 
     }
-    next(); // allow GET
+    next();
   },
   proxy(process.env.PRODUCT_SERVICE_URL, {
     ...proxyOptions,
@@ -103,6 +102,28 @@ app.use(
     proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
       proxyReqOpts.headers["Content-Type"] = "application/json";
       proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Post service: ${proxyRes.statusCode}`
+      );
+
+      return proxyResData;
+    },
+  })
+);
+
+app.use(
+  "/v1/cart",
+  validateToken,
+  proxy(process.env.CART_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
 
       return proxyReqOpts;
     },
