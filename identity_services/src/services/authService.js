@@ -19,10 +19,10 @@ export async function registerUser(data) {
     data: {
       email,
       password: hashedPassword,
-      profilePicUrl: username, 
+      profilePicUrl: username,
     },
   });
-  
+
   const { accessToken, refreshToken } = await generateTokens(user);
   return { accessToken, refreshToken, user };
 }
@@ -41,7 +41,7 @@ export async function loginUser(data) {
 
   const { accessToken, refreshToken } = await generateTokens(user);
 
-  return { accessToken, refreshToken, userId: user.id, Role:user.role };
+  return { accessToken, refreshToken, userId: user.id, Role: user.role };
 }
 
 export async function refreshTokenUser(refreshToken) {
@@ -65,6 +65,7 @@ export async function refreshTokenUser(refreshToken) {
 
   return { accessToken: newAccessToken, refreshToken: newRefreshToken };
 }
+
 
 export async function logoutUser(refreshToken) {
   if (!refreshToken) throw new Error("Refresh token missing");

@@ -1,11 +1,10 @@
-// src/services/cartService.js
+
 import prisma from "../prisma/client.js";
 import redisClient from "../config/redis.js";
 import { fetchProduct } from "./productService.js";
 
 const CART_CACHE_PREFIX = "cart:";
 
-// -------------------- Redis helpers --------------------
 async function getCachedCart(userId) {
   const cached = await redisClient.get(CART_CACHE_PREFIX + userId);
   return cached ? JSON.parse(cached) : null;
@@ -19,7 +18,7 @@ async function invalidateCache(userId) {
   await redisClient.del(CART_CACHE_PREFIX + userId);
 }
 
-// -------------------- Get Cart --------------------
+
 export async function getCart(userId) {
   const cached = await getCachedCart(userId);
   if (cached) return cached;
@@ -37,9 +36,8 @@ export async function getCart(userId) {
   return cart;
 }
 
-// -------------------- Add to Cart --------------------
+
 export async function addToCart(userId, productId, quantity = 1) {
-  // Validate product exists
   const product = await fetchProduct(productId);
 
   let cart = await prisma.cart.findUnique({
@@ -60,7 +58,7 @@ export async function addToCart(userId, productId, quantity = 1) {
     });
   } else {
     await prisma.cartItem.create({
-      data: { cartId: cart.id, product: productId, quantity },
+      data: { cartId: cart.id, productId: productId, quantity, price:product.dp },
     });
   }
 

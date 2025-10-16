@@ -120,13 +120,16 @@ app.use(
   validateToken,
   proxy(process.env.CART_SERVICE_URL, {
     ...proxyOptions,
-    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
-      proxyReqOpts.headers["Content-Type"] = "application/json";
-      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
-      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
+   proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+  proxyReqOpts.headers["Content-Type"] = "application/json";
+  proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+  proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
 
-      return proxyReqOpts;
-    },
+  // 👇 forward Authorization header to the Cart Service (optional)
+  proxyReqOpts.headers["authorization"] = srcReq.headers["authorization"];
+
+  return proxyReqOpts;
+},
     userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
       logger.info(
         `Response received from Post service: ${proxyRes.statusCode}`
@@ -137,6 +140,33 @@ app.use(
   })
 );
 
+
+app.use(
+  "/v1/checkout",
+  validateToken,
+  proxy(process.env.CHECKOUT_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
+
+      // 👇 Forward the same JWT token for validation in Checkout service
+      const authHeader = srcReq.headers["authorization"];
+      if (authHeader) {
+        proxyReqOpts.headers["authorization"] = authHeader;
+      }
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Checkout service: ${proxyRes.statusCode}`
+      );
+      return proxyResData;
+    },
+  })
+);
 export default app;
 
 
