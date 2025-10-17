@@ -167,6 +167,34 @@ app.use(
     },
   })
 );
+
+
+app.use(
+  "/v1/order",
+  validateToken,
+  proxy(process.env.ORDER_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
+
+      // 👇 Forward the same JWT token for validation in Checkout service
+      const authHeader = srcReq.headers["authorization"];
+      if (authHeader) {
+        proxyReqOpts.headers["authorization"] = authHeader;
+      }
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Checkout service: ${proxyRes.statusCode}`
+      );
+      return proxyResData;
+    },
+  })
+);
 export default app;
 
 

@@ -310,3 +310,9 @@
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-15T05:20:14.972Z"}
 {"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-15T06:36:37.668Z"}
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-15T06:36:37.674Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-16T06:24:07.464Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-16T06:24:07.468Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-16T06:46:46.393Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-16T06:46:46.394Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-17T07:09:13.661Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T07:09:13.665Z"}
