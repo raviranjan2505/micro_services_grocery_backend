@@ -1149,3 +1149,266 @@
 {"level":"info","message":"Received GET request to /v1/products/allproducts","service":"identity-service","timestamp":"2025-10-17T08:08:43.407Z"}
 {"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T08:08:43.407Z"}
 {"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T08:08:43.691Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-10-17T10:05:55.985Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-17T10:08:27.669Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:08:27.670Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-17T10:08:28.151Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:09:21.070Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:09:21.070Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-17T10:09:21.074Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:09:27.060Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:09:27.061Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:09:27.099Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:09:36.142Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:09:36.143Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:09:36.178Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:09:36.178Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:09:36.445Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:09:36.662Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:09:41.876Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:09:41.876Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:09:41.884Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:09:41.884Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:09:41.959Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:09:41.969Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:15:55.970Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:15:55.970Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:15:56.029Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:15:56.029Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:15:56.039Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:15:56.054Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:15:59.616Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:15:59.616Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:15:59.625Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:15:59.625Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:15:59.698Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:15:59.775Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:20:07.022Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:20:07.023Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:20:07.072Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:20:07.073Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:20:07.078Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:20:07.217Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:20:11.620Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:20:11.620Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:20:11.628Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:20:11.629Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:20:11.640Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:20:11.649Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:21:53.763Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:21:53.763Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:21:53.811Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:21:53.812Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:21:53.902Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:21:54.014Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:26:36.501Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:26:36.501Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:26:36.508Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:26:36.509Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:26:36.514Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:26:36.538Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:26:44.951Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:26:44.951Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:26:44.960Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:26:44.960Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:26:45.037Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:26:45.046Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:26:47.014Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:26:47.016Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:26:47.024Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:26:47.024Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:26:47.031Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:26:47.040Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:38:33.930Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:38:33.931Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:38:33.938Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:38:38.672Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:38:38.672Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:38:38.680Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:38:38.680Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:38:38.752Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:38:38.823Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:38:43.074Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:38:43.074Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:38:43.082Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:38:43.082Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:38:43.136Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:38:43.144Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:45:59.875Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:45:59.875Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:45:59.883Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:45:59.884Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:46:00.266Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:46:00.282Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:54:41.167Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:54:41.168Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:54:41.201Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T10:54:49.356Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:54:49.357Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T10:54:49.390Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:54:49.390Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T10:54:49.472Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T10:54:49.548Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:54:53.305Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:54:53.306Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:54:53.316Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:54:53.316Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:54:53.438Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-17T10:54:53.448Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T10:56:20.878Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T10:56:20.878Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T10:56:20.887Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:56:20.887Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-17T10:56:21.158Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-17T10:56:21.161Z"}
+{"level":"info","message":"Received GET request to //v1/order","service":"identity-service","timestamp":"2025-10-17T11:12:57.079Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:12:57.082Z"}
+{"level":"info","message":"Received GET request to /v1/order","service":"identity-service","timestamp":"2025-10-17T11:13:04.856Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:13:04.856Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-17T11:13:04.863Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-17T11:13:10.741Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T11:13:10.741Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-17T11:13:11.155Z"}
+{"level":"info","message":"Received GET request to /v1/order","service":"identity-service","timestamp":"2025-10-17T11:13:27.994Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:13:27.995Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T11:13:28.118Z"}
+{"level":"info","message":"Received GET request to /v1/order/1","service":"identity-service","timestamp":"2025-10-17T11:15:42.159Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:15:42.159Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-10-17T11:15:42.160Z"}
+{"level":"info","message":"Received GET request to /v1/order/1","service":"identity-service","timestamp":"2025-10-17T11:15:58.349Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:15:58.349Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-17T11:15:58.350Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-17T11:16:03.311Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T11:16:03.311Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-17T11:16:03.404Z"}
+{"level":"info","message":"Received GET request to /v1/order/1","service":"identity-service","timestamp":"2025-10-17T11:16:12.804Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:16:12.804Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T11:16:12.817Z"}
+{"level":"info","message":"Received PUT request to /v1/order/1/status","service":"identity-service","timestamp":"2025-10-17T11:21:59.544Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:21:59.545Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T11:21:59.657Z"}
+{"level":"info","message":"Received PUT request to /v1/order/1/status","service":"identity-service","timestamp":"2025-10-17T11:27:38.885Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T11:27:38.886Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T11:27:38.966Z"}
+{"level":"info","message":"Received GET request to /v1/order/1","service":"identity-service","timestamp":"2025-10-17T11:32:50.825Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T11:32:50.825Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T11:32:50.891Z"}
+{"level":"info","message":"Received GET request to /v1/order","service":"identity-service","timestamp":"2025-10-17T12:36:13.978Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T12:36:13.987Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-17T12:36:14.025Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-17T12:36:23.902Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T12:36:23.902Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-17T12:36:24.268Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-17T12:36:36.864Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T12:36:36.865Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-17T12:36:37.035Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T12:36:37.035Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-17T12:36:37.264Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T12:36:37.475Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-17T12:36:45.937Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T12:36:45.937Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-17T12:36:45.954Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T12:36:45.954Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-17T12:36:46.350Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-17T12:36:46.362Z"}
+{"level":"info","message":"Received GET request to /v1/order","service":"identity-service","timestamp":"2025-10-17T12:36:55.714Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T12:36:55.714Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-17T12:36:55.715Z"}
+{"level":"info","message":"Received GET request to /v1/order","service":"identity-service","timestamp":"2025-10-17T12:37:01.393Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-17T12:37:01.393Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-17T12:37:01.466Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-10-21T10:38:57.140Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-21T10:39:01.568Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T10:39:01.569Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-21T10:39:02.187Z"}
+{"level":"info","message":"Received GET request to /v1/order","service":"identity-service","timestamp":"2025-10-21T10:39:36.101Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T10:39:36.102Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-21T10:39:36.403Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-21T10:48:26.340Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T10:48:26.340Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-21T10:48:26.415Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T10:48:26.416Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-21T10:48:26.793Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-21T10:48:27.172Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-21T11:10:52.270Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:10:52.281Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-21T11:10:52.359Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-21T11:11:10.339Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:11:10.339Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-21T11:11:10.770Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-21T11:11:44.498Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:11:44.499Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-21T11:11:44.513Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-21T11:11:50.545Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:11:50.545Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-21T11:11:50.553Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:11:50.554Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-21T11:11:50.803Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-21T11:11:51.011Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-21T11:11:55.089Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:11:55.089Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-21T11:11:55.099Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:11:55.099Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-21T11:11:55.462Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-21T11:11:55.465Z"}
+{"level":"info","message":"Received POST request to /v1/shipping","service":"identity-service","timestamp":"2025-10-21T11:19:12.752Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:19:12.753Z"}
+{"level":"info","message":"Response received from Shipping service: 404","service":"identity-service","timestamp":"2025-10-21T11:19:12.912Z"}
+{"level":"info","message":"Received POST request to /v1/shipping/","service":"identity-service","timestamp":"2025-10-21T11:23:17.499Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:23:17.500Z"}
+{"level":"info","message":"Response received from Shipping service: 404","service":"identity-service","timestamp":"2025-10-21T11:23:17.506Z"}
+{"level":"info","message":"Received POST request to /v1/shipping","service":"identity-service","timestamp":"2025-10-21T11:24:05.312Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:24:05.312Z"}
+{"level":"info","message":"Response received from Shipping service: 404","service":"identity-service","timestamp":"2025-10-21T11:24:05.317Z"}
+{"level":"info","message":"Received POST request to /v1/shipping","service":"identity-service","timestamp":"2025-10-21T11:26:08.065Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:26:08.065Z"}
+{"level":"info","message":"Response received from Shipping service: 400","service":"identity-service","timestamp":"2025-10-21T11:26:09.606Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-21T11:28:15.640Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:28:15.641Z"}
+{"level":"info","message":"Response received from Checkout service: 400","service":"identity-service","timestamp":"2025-10-21T11:28:15.657Z"}
+{"level":"info","message":"Received POST request to /v1/shipping","service":"identity-service","timestamp":"2025-10-21T11:28:21.041Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:28:21.041Z"}
+{"level":"info","message":"Response received from Shipping service: 201","service":"identity-service","timestamp":"2025-10-21T11:28:21.268Z"}
+{"level":"info","message":"Received POST request to /v1/shipping/","service":"identity-service","timestamp":"2025-10-21T11:29:43.942Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:29:43.942Z"}
+{"level":"info","message":"Response received from Shipping service: 201","service":"identity-service","timestamp":"2025-10-21T11:29:43.950Z"}
+{"level":"info","message":"Received GET request to /v1/shipping/1","service":"identity-service","timestamp":"2025-10-21T11:30:50.619Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:30:50.619Z"}
+{"level":"info","message":"Response received from Shipping service: 200","service":"identity-service","timestamp":"2025-10-21T11:30:50.651Z"}
+{"level":"info","message":"Received PATCH request to /v1/shipping/1/status","service":"identity-service","timestamp":"2025-10-21T11:34:56.571Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:34:56.571Z"}
+{"level":"info","message":"Response received from Shipping service: 200","service":"identity-service","timestamp":"2025-10-21T11:34:56.668Z"}
+{"level":"info","message":"Received GET request to /v1/shipping/1","service":"identity-service","timestamp":"2025-10-21T11:35:08.460Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:35:08.460Z"}
+{"level":"info","message":"Response received from Shipping service: 200","service":"identity-service","timestamp":"2025-10-21T11:35:08.470Z"}
+{"level":"info","message":"Received POST request to /v1/shipping/webhook","service":"identity-service","timestamp":"2025-10-21T11:39:04.435Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:39:04.436Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-10-21T11:39:04.436Z"}
+{"level":"info","message":"Received POST request to /v1/shipping/webhook","service":"identity-service","timestamp":"2025-10-21T11:40:12.494Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:40:12.495Z"}
+{"level":"warn","message":"Access attempt without valid token!","service":"identity-service","timestamp":"2025-10-21T11:40:12.495Z"}
+{"level":"info","message":"Received GET request to /v1/shipping/1","service":"identity-service","timestamp":"2025-10-21T11:40:50.943Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T11:40:50.956Z"}
+{"level":"info","message":"Response received from Shipping service: 200","service":"identity-service","timestamp":"2025-10-21T11:40:50.962Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-21T12:01:54.892Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T12:01:54.893Z"}
+{"level":"warn","message":"Invalid token!","service":"identity-service","timestamp":"2025-10-21T12:01:54.897Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"identity-service","timestamp":"2025-10-21T12:02:00.617Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T12:02:00.617Z"}
+{"level":"info","message":"Response received from Identity service: 200","service":"identity-service","timestamp":"2025-10-21T12:02:00.991Z"}
+{"level":"info","message":"Received GET request to /v1/checkout/previewOrder","service":"identity-service","timestamp":"2025-10-21T12:02:13.121Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T12:02:13.121Z"}
+{"level":"info","message":"Received GET request to /v1/cart/","service":"identity-service","timestamp":"2025-10-21T12:02:13.179Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T12:02:13.180Z"}
+{"level":"info","message":"Response received from Post service: 200","service":"identity-service","timestamp":"2025-10-21T12:02:13.370Z"}
+{"level":"info","message":"Response received from Checkout service: 200","service":"identity-service","timestamp":"2025-10-21T12:02:13.591Z"}
+{"level":"info","message":"Received POST request to /v1/checkout/placeOrder","service":"identity-service","timestamp":"2025-10-21T12:02:19.164Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T12:02:19.164Z"}
+{"level":"info","message":"Received POST request to /v1/order","service":"identity-service","timestamp":"2025-10-21T12:02:19.184Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T12:02:19.185Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-21T12:02:19.410Z"}
+{"level":"info","message":"Response received from Checkout service: 201","service":"identity-service","timestamp":"2025-10-21T12:02:19.418Z"}
+{"level":"info","message":"Received GET request to /v1/shipping/2","service":"identity-service","timestamp":"2025-10-21T12:02:38.459Z"}
+{"level":"info","message":"Request body, undefined","service":"identity-service","timestamp":"2025-10-21T12:02:38.460Z"}
+{"level":"info","message":"Response received from Shipping service: 200","service":"identity-service","timestamp":"2025-10-21T12:02:38.541Z"}
+{"level":"info","message":"Identity service is running on port http://localhost:5001","service":"identity-service","timestamp":"2025-10-21T12:03:02.978Z"}

@@ -316,3 +316,17 @@
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-16T06:46:46.394Z"}
 {"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-17T07:09:13.661Z"}
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T07:09:13.665Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-17T10:08:27.715Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T10:08:27.720Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-17T11:13:10.834Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T11:13:10.841Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-17T11:16:03.314Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T11:16:03.314Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-17T12:36:24.003Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-17T12:36:24.010Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-21T10:39:01.608Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T10:39:01.613Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-21T11:11:10.350Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T11:11:10.352Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"identity-service","timestamp":"2025-10-21T12:02:00.720Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-10-21T12:02:00.736Z"}

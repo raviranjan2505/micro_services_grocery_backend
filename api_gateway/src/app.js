@@ -195,6 +195,38 @@ app.use(
     },
   })
 );
+
+
+// 🚚 Shipping Service Proxy
+app.use(
+  "/v1/shipping",
+  validateToken,
+  proxy(process.env.SHIPPING_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      // Common headers
+      proxyReqOpts.headers["Content-Type"] = "application/json";
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
+
+      // Forward Authorization token
+      const authHeader = srcReq.headers["authorization"];
+      if (authHeader) {
+        proxyReqOpts.headers["authorization"] = authHeader;
+      }
+
+      return proxyReqOpts;
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+      logger.info(
+        `Response received from Shipping service: ${proxyRes.statusCode}`
+      );
+      return proxyResData;
+    },
+  })
+);
+
+
 export default app;
 
 
