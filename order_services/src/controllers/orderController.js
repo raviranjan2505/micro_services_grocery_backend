@@ -6,8 +6,15 @@ export async function createOrder(req, res) {
   try {
     const userId = Number(req.user.userId);
      const token = req.headers.authorization;
-    const cartItems = req.body.cartItems;
-    const order = await orderService.createOrder(userId, cartItems, token);
+    const { cartItems, subtotal, discount, total, couponCode } = req.body;
+    const order = await orderService.createOrder(
+      userId,
+      cartItems,
+      token,
+      subtotal || 0,
+      discount || 0,
+      total,         // required for Prisma totalAmount
+      couponCode || null);
     res.status(201).json({ success: true, data: order });
   } catch (err) {
     res.status(400).json({ success: false, message: err.message });

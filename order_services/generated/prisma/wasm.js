@@ -95,7 +95,10 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 exports.Prisma.OrderScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
+  subtotal: 'subtotal',
+  discount: 'discount',
   totalAmount: 'totalAmount',
+  couponCode: 'couponCode',
   status: 'status',
   paymentId: 'paymentId',
   createdAt: 'createdAt',
@@ -178,6 +181,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -186,13 +190,13 @@ const config = {
       }
     }
   },
-  "inlineSchema": "datasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\nmodel Order {\n  id          Int         @id @default(autoincrement())\n  userId      Int\n  totalAmount Float\n  status      OrderStatus @default(PENDING)\n  paymentId   String? // optional external payment id\n  createdAt   DateTime    @default(now())\n  updatedAt   DateTime    @updatedAt\n  items       OrderItem[]\n}\n\nmodel OrderItem {\n  id        Int     @id @default(autoincrement())\n  orderId   Int\n  productId String\n  name      String? // snapshot product name\n  image     String? // snapshot default image\n  price     Float\n  quantity  Int\n  order     Order   @relation(fields: [orderId], references: [id])\n}\n\nenum OrderStatus {\n  PENDING\n  CREATED\n  PAID\n  FULFILLED\n  CANCELLED\n  REFUNDED\n}\n",
-  "inlineSchemaHash": "63961205995f5831ce4153d4ad37c86d3750c462ccac79a9a0b2ca6492b91a86",
+  "inlineSchema": "datasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\nmodel Order {\n  id          Int         @id @default(autoincrement())\n  userId      Int\n  subtotal    Float?      @default(0) // total before discount\n  discount    Float       @default(0) // discount applied (if any)\n  totalAmount Float // final amount after discount\n  couponCode  String? // store which coupon was used\n  status      OrderStatus @default(PENDING)\n  paymentId   String? // optional external payment id\n  createdAt   DateTime    @default(now())\n  updatedAt   DateTime    @updatedAt\n  items       OrderItem[]\n}\n\nmodel OrderItem {\n  id        Int     @id @default(autoincrement())\n  orderId   Int\n  productId String\n  name      String? // snapshot product name\n  image     String? // snapshot default image\n  price     Float\n  quantity  Int\n  order     Order   @relation(fields: [orderId], references: [id])\n}\n\nenum OrderStatus {\n  PENDING\n  CREATED\n  PAID\n  FULFILLED\n  CANCELLED\n  REFUNDED\n}\n",
+  "inlineSchemaHash": "90f8e786f30a1cd14043a6f5f1028a6b664dcd12b1abad5636eb9e2eed0202cd",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Order\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"totalAmount\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"OrderStatus\"},{\"name\":\"paymentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"items\",\"kind\":\"object\",\"type\":\"OrderItem\",\"relationName\":\"OrderToOrderItem\"}],\"dbName\":null},\"OrderItem\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"orderId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"productId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"image\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"price\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"quantity\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"order\",\"kind\":\"object\",\"type\":\"Order\",\"relationName\":\"OrderToOrderItem\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"Order\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"subtotal\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"discount\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"totalAmount\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"couponCode\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"enum\",\"type\":\"OrderStatus\"},{\"name\":\"paymentId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"items\",\"kind\":\"object\",\"type\":\"OrderItem\",\"relationName\":\"OrderToOrderItem\"}],\"dbName\":null},\"OrderItem\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"orderId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"productId\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"image\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"price\",\"kind\":\"scalar\",\"type\":\"Float\"},{\"name\":\"quantity\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"order\",\"kind\":\"object\",\"type\":\"Order\",\"relationName\":\"OrderToOrderItem\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: async () => require('./query_engine_bg.js'),

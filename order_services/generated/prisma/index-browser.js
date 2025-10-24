@@ -123,7 +123,10 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 exports.Prisma.OrderScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
+  subtotal: 'subtotal',
+  discount: 'discount',
   totalAmount: 'totalAmount',
+  couponCode: 'couponCode',
   status: 'status',
   paymentId: 'paymentId',
   createdAt: 'createdAt',

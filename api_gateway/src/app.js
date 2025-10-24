@@ -227,6 +227,34 @@ app.use(
 );
 
 
+app.use(
+  "/v1/wishlist",
+  validateToken,
+  proxy(process.env.WISHLIST_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
+      proxyReqOpts.headers["authorization"] = srcReq.headers["authorization"];
+      return proxyReqOpts;
+    },
+  })
+);
+
+app.use(
+  "/v1/coupons",
+  validateToken,
+  proxy(process.env.COUPON_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+      proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+      proxyReqOpts.headers["x-user-role"] = srcReq.user.role;
+      proxyReqOpts.headers["authorization"] = srcReq.headers["authorization"];
+      return proxyReqOpts;
+    },
+  })
+);
+
 export default app;
 
 

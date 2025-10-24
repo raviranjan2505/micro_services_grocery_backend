@@ -1,6 +1,7 @@
 
 import prisma from "../prisma/client.js";
 import redis from "../config/redis.js";
+import axios from "axios"
 import { fetchProduct } from "./productService.js";
 
 const ORDER_CACHE_PREFIX = "order:";
@@ -9,93 +10,105 @@ async function cacheOrder(order) {
   await redis.setEx(`${ORDER_CACHE_PREFIX}${order.id}`, 300, JSON.stringify(order));
 }
 
+
+
 // export async function createOrder(userId, cartItems, token) {
-//   if (!cartItems || !cartItems.length) throw new Error("Cart is empty");
+//     if (!cartItems || !cartItems.length) throw new Error("Cart is empty");
 
-//   let totalAmount = 0;
-//   const itemsToCreate = [];
+//     let totalAmount = 0;
+//     const itemsToCreate = [];
 
-//   for (const it of cartItems) {
-//     const product = await fetchProduct(Number(it.productId), token);
-//     const qty = Number(it.quantity || 1);
-//     totalAmount += product.price * qty;
+//     for (const it of cartItems) {
+//         const product = 
+// (Number(it.productId), token);
+//         const qty = Number(it.quantity || 1);
+//         totalAmount += product.price * qty;
 
-//     itemsToCreate.push({
-//       productId: String(it.productId),
-//       name: product.name,
-//       image: product.image,
-//       price: product.price,
-//       quantity: qty,
+//         itemsToCreate.push({
+//             productId: String(it.productId),
+//             name: product.name,
+//             image: product.image,
+//             price: product.price,
+//             quantity: qty,
+//         });
+//     }
+
+//     // Create order
+//     const order = await prisma.order.create({
+//         data: {
+//             userId,
+//             totalAmount,
+//             items: { create: itemsToCreate },
+//         },
+//         include: { items: true },
 //     });
-//   }
 
-//   const order = await prisma.order.create({
-//     data: {
-//       userId,
-//       totalAmount,
-//       items: { create: itemsToCreate },
-//     },
-//     include: { items: true },
-//   });
+//     await cacheOrder(order);
 
-//   await cacheOrder(order);
-//   return order;
+//     // Call Shipping Service
+//     try {
+//         const shippingResponse = await axios.post(
+//             "process.env.API_GATEWAY_URL/v1/shipping",
+//             {
+//                 orderId: order.id,
+//                 courier: "DHL"
+//             },
+//             {
+//                 headers: { Authorization: token }
+//             }
+//         );
+//         order.shipment = shippingResponse.data.data;
+//     } catch (err) {
+//         console.error("Shipping service error:", err.message);
+//         order.shipment = null;
+//     }
+
+//     return order;
 // }
 
 
+export async function createOrder(userId, cartItems, token, subtotal, discount, total, couponCode) {
+  if (!cartItems || !cartItems.length) throw new Error("Cart is empty");
 
-export async function createOrder(userId, cartItems, token) {
-    if (!cartItems || !cartItems.length) throw new Error("Cart is empty");
+  const itemsToCreate = cartItems.map(item => ({
+    productId: String(item.productId),
+    name: item.name,
+    image: item.image,
+    price: item.price,
+    quantity: item.quantity,
+  }));
 
-    let totalAmount = 0;
-    const itemsToCreate = [];
+  const order = await prisma.order.create({
+    data: {
+      userId,
+      subtotal,
+      discount,
+      totalAmount:total,
+      couponCode,
+      items: { create: itemsToCreate },
+    },
+    include: { items: true },
+  });
 
-    for (const it of cartItems) {
-        const product = await fetchProduct(Number(it.productId), token);
-        const qty = Number(it.quantity || 1);
-        totalAmount += product.price * qty;
+  await cacheOrder(order);
 
-        itemsToCreate.push({
-            productId: String(it.productId),
-            name: product.name,
-            image: product.image,
-            price: product.price,
-            quantity: qty,
-        });
-    }
+  try {
+    const shippingResponse = await axios.post(
+      `${process.env.API_GATEWAY_URL}/v1/shipping`,
+      { orderId: order.id, courier: "DHL" },
+      { headers: { Authorization: token } }
+    );
+    order.shipment = shippingResponse.data.data;
+    console.log("shipment Partner", order.shipment)
+  } catch (err) {
+    console.error("Shipping service error:", err.message);
+    order.shipment = null;
+  }
 
-    // Create order
-    const order = await prisma.order.create({
-        data: {
-            userId,
-            totalAmount,
-            items: { create: itemsToCreate },
-        },
-        include: { items: true },
-    });
-
-    await cacheOrder(order);
-
-    // Call Shipping Service
-    try {
-        const shippingResponse = await axios.post(
-            "process.env.API_GATEWAY_URL/v1/shipping",
-            {
-                orderId: order.id,
-                courier: "DHL"
-            },
-            {
-                headers: { Authorization: token }
-            }
-        );
-        order.shipment = shippingResponse.data.data;
-    } catch (err) {
-        console.error("Shipping service error:", err.message);
-        order.shipment = null;
-    }
-
-    return order;
+  return order;
 }
+
+
 
 export async function getOrderById(orderId, requestingUser) {
   const cached = await redis.get(`${ORDER_CACHE_PREFIX}${orderId}`);

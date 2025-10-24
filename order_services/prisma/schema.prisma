@@ -9,13 +9,16 @@ generator client {
 }
 
 model Order {
-  id          Int         @id @default(autoincrement())
+  id          Int          @id @default(autoincrement())
   userId      Int
-  totalAmount Float
-  status      OrderStatus @default(PENDING)
-  paymentId   String?     // optional external payment id
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  subtotal    Float?          @default(0) // total before discount
+  discount    Float         @default(0) // discount applied (if any)
+  totalAmount Float         // final amount after discount
+  couponCode  String?       // store which coupon was used
+  status      OrderStatus   @default(PENDING)
+  paymentId   String?       // optional external payment id
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
   items       OrderItem[]
 }
 

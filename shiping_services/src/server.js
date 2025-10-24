@@ -5,7 +5,7 @@ import logger from "./utils/logger.js";
 dotenv.config();
 
 app.use(errorHandler);
-const PORT = process.env.PORT || 5004;
+const PORT = process.env.PORT || 5005;
 
 app.listen(PORT, () => {
   console.log(`Shiping Service running on http://localhost:${PORT}`);
