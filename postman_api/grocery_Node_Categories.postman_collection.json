@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "d4611e56-17df-4ecc-9e7e-3b90ae8a1305",
+		"name": "grocery_Node_Categories",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48065311"
+	},
+	"item": [
+		{
+			"name": "createCategories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "categoryData",
+							"value": "{\n  \"name\": \"Fashion\",\n  \"slug\": \"fashion\",\n  \"active\": true,\n\"imageKey\": \"fashionImg\",\n  \"subcategories\": [\n    {\n      \"name\": \"Shirt\",\n      \"slug\": \"shirt\",\n      \"active\": true,\n      \"imageKey\": \"shirtImg\",\n      \"subcategories\": [\n        {\n          \"name\": \"Half Sleeve\",\n          \"slug\": \"half_sleeve\",\n          \"active\": true,\n          \"imageKey\": \"halfImg\"\n        }\n      ]\n    }\n  ]\n}\n",
+							"type": "text"
+						},
+						{
+							"key": "fashionImg",
+							"type": "file",
+							"src": "/C:/Users/del/Downloads/fashion_img.jpg"
+						},
+						{
+							"key": "shirtImg",
+							"type": "file",
+							"src": "/C:/Users/del/Downloads/shirt_img.webp"
+						},
+						{
+							"key": "halfImg",
+							"type": "file",
+							"src": "/C:/Users/del/Downloads/halfsleeve_img.webp"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_category_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updata_category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Electronics\",\r\n  \"slug\": \"electronics\",\r\n  \"image\": \"https://example.com/electronics-updated.jpg\",\r\n  \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

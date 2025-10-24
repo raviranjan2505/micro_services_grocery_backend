@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "04c03055-3c48-4c4f-8d8d-9a6a7842630b",
+		"name": "grocery_Node_Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48065311"
+	},
+	"item": [
+		{
+			"name": "create_products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productData",
+							"value": "{\n  \"productCode\": \"PRD2003\",\n  \"productName\": \"Glass Coffee Table\",\n  \"shortDescription\": \"Stylish glass coffee table for modern living rooms\",\n  \"fullDescription\": \"Premium tempered glass coffee table with a sturdy wooden base, designed to add elegance and functionality to your living space. Perfect for Home & Kitchen furniture setups.\",\n  \"gstPercentage\": 18,\n  \"categoryId\": 1,\n  \"subCategoryId\": 2,\n  \"subCategoryId2\": 3,\n  \"brandName\": \"UrbanLiving\",\n  \"brandLogo\": \"https://example.com/urbanliving-logo.jpg\",\n  \"mrp\": 8999,\n  \"dp\": 7299,\n  \"stockQuantity\": 30,\n  \"productSlug\": \"glass-coffee-table\",\n  \"attributes\": [\n    { \"name\": \"Material\", \"value\": \"Tempered Glass + Wood\" },\n    { \"name\": \"Shape\", \"value\": \"Rectangular\" },\n    { \"name\": \"Dimensions\", \"value\": \"100cm x 60cm x 45cm\" }\n  ],\n  \"variants\": [\n    { \"sku\": \"UL-GCT-01\", \"price\": 7299, \"stock\": 10, \"attributes\": { \"material\": \"Glass + Wood\", \"color\": \"Natural Wood\" } },\n    { \"sku\": \"UL-GCT-02\", \"price\": 7599, \"stock\": 10, \"attributes\": { \"material\": \"Glass + Wood\", \"color\": \"Dark Walnut\" } },\n    { \"sku\": \"UL-GCT-03\", \"price\": 7499, \"stock\": 10, \"attributes\": { \"material\": \"Glass + Wood\", \"color\": \"Black Oak\" } }\n  ]\n}\n",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/C:/Users/del/Downloads/AYUSH 82.png",
+								"/C:/Users/del/Downloads/DYBO WELL RAS.png",
+								"/C:/Users/del/Downloads/PANCH TULSI DROPS.png",
+								"/C:/Users/del/Downloads/JAUNLIV.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjA0MjA1NDMsImV4cCI6MTc2MDQyNDE0M30.EDn2ba5Os3x-UaU5Kk9zHNx3tIHhE4i45mGtCpZ3GQQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/products/allproducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products",
+						"allproducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_product_by_cat_slug",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/category/electronics?page=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"category",
+						"electronics"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_product_by_id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productName\": \"iPhone 15 Pro\",\r\n  \"shortDescription\": \"Updated iPhone model\",\r\n  \"mrp\": 99999,\r\n  \"dp\": 94999,\r\n  \"stockQuantity\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_product_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home_categories_products_slider",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/category-sliders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"category-sliders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product_infor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/men-striped-casual-multicolor-shirt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"men-striped-casual-multicolor-shirt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products/search?q=shirt&page=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "shirt"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_product_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjA0NDc0MTMsImV4cCI6MTc2MDQ1MTAxM30.EKQV5ZXB1iFxKyMvSzdnJWno_bFxdAL1FhV3C2PpqnM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/products/productId/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products",
+						"productId",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

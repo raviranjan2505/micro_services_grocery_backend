@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "4ca1f2ae-af66-4519-8c83-986950881718",
+		"name": "grocery_Node_Chekout",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48065311"
+	},
+	"item": [
+		{
+			"name": "placeOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjA0MzU3MjEsImV4cCI6MTc2MDQzOTMyMX0.CYrdIORmbqVIAYMZTSE1BMEFuZKjMw2hdIxPrcnQKyE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    { \"productId\": \"101\", \"quantity\": 2 },\r\n    { \"productId\": \"102\", \"quantity\": 1 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/checkout/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"checkout",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "preview_order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjA0MzkzNjYsImV4cCI6MTc2MDQ0Mjk2Nn0.-jprbSAi_xwO55Fbgrm9OPxWzOI9OG4cW6EiwKaWegA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/checkout/previewOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"checkout",
+						"previewOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

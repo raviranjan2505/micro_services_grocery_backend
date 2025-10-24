@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "395d30dc-9c16-4786-b3dd-3a8632373cbc",
+		"name": "grocerey_Node_Coupon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48065311"
+	},
+	"item": [
+		{
+			"name": "create_coupon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjEyMTM0MTYsImV4cCI6MTc2MTIxNzAxNn0.IK3IR-JX2D4X9g7Kf6vCx09WKIgVgRQyNmpmRWJFHKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"NEWYEAR10\",\r\n  \"description\": \"10% off on all products\",\r\n  \"discount\": 10,\r\n  \"type\": \"percentage\",\r\n  \"maxUsage\": 100,\r\n  \"startDate\": \"2025-10-22T00:00:00Z\",\r\n  \"endDate\": \"2025-12-31T23:59:59Z\",\r\n  \"isActive\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_coupons_by_code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjEyMjY0MDAsImV4cCI6MTc2MTIzMDAwMH0.8CZyxAZvB3NJ1zSMy-47_3KLMnw2nTavYxp_FbLYAzE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/coupons/NEWYEAR10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"coupons",
+						"NEWYEAR10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_coupon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjEyMjY0MDAsImV4cCI6MTc2MTIzMDAwMH0.8CZyxAZvB3NJ1zSMy-47_3KLMnw2nTavYxp_FbLYAzE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/coupons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"coupons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate_coupon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjEyMTM0MTYsImV4cCI6MTc2MTIxNzAxNn0.IK3IR-JX2D4X9g7Kf6vCx09WKIgVgRQyNmpmRWJFHKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"NEWYEAR10\",\r\n  \"userId\": 2,\r\n  \"orderTotal\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/coupons/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"coupons",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_coupon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjEyMjY0MDAsImV4cCI6MTc2MTIzMDAwMH0.8CZyxAZvB3NJ1zSMy-47_3KLMnw2nTavYxp_FbLYAzE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"NEWYEAR11\",\r\n  \"description\": \"10% off on all products\",\r\n  \"discount\": 10,\r\n  \"type\": \"percentage\",\r\n  \"maxUsage\": 100,\r\n  \"startDate\": \"2025-10-22T00:00:00Z\",\r\n  \"endDate\": \"2025-12-31T23:59:59Z\",\r\n  \"isActive\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/coupons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"coupons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_coupon",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoidGVzdHVzZXJAZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NjEyMjY0MDAsImV4cCI6MTc2MTIzMDAwMH0.8CZyxAZvB3NJ1zSMy-47_3KLMnw2nTavYxp_FbLYAzE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"NEWYEAR11\",\r\n  \"description\": \"10% off on all products\",\r\n  \"discount\": 10,\r\n  \"type\": \"percentage\",\r\n  \"maxUsage\": 100,\r\n  \"startDate\": \"2025-10-22T00:00:00Z\",\r\n  \"endDate\": \"2025-12-31T23:59:59Z\",\r\n  \"isActive\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/coupons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"coupons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
