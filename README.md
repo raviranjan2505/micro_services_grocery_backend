@@ -1,35 +1,3 @@
-          ┌───────────────┐
-          │ API Gateway   │
-          └─────┬─────────┘
-                │
-   ┌────────────┴─────────────┐
-   │                          │
-┌───────┐                 ┌────────┐
-│ Identity│                 │ Product│
-│ Service │                 │ Service│
-└───────┘                 └────────┘
-   │                          │
-┌────────┐                 ┌───────────┐
-│ Cart   │                 │ Wishlist  │
-│ Service│                 │ Service   │
-└────────┘                 └───────────┘
-   │                          │
-   └─────────────┬────────────┘
-                 │
-            ┌───────────────┐
-            │ Checkout      │
-            │ Service       │
-            └───────────────┘
-                 │
-          ┌──────┴───────┐
-          │ Order Service│
-          └──────┬───────┘
-                 │
-          ┌──────┴────────┐
-          │ Shipping      │
-          │ Service       │
-          └───────────────┘
-Redis is used for caching frequently accessed data (cart, checkout previews).
 
 Features
 User Management: Sign up, login, JWT-based authentication, role-based access
@@ -41,4 +9,5 @@ Shipping: Integration with shipping service
 Coupon & Discounts: Create, validate, update, delete, and list coupons
 Caching: Redis caching for fast data retrieval
 
+Redis is used for caching frequently accessed data (cart, checkout previews).
 
